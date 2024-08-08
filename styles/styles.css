@@ -15,14 +15,15 @@
   --link-color: #0296A6;
   --link-hover-color: #3E6470;
   --background-color: #fff;
+  --nav-background-color: #000;
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
   --text-color: #2C2C2C;
 
   /* fonts */
-  --body-font-family: 'adobe-clean', helvetica, ubuntu, roboto, noto, sans-serif;
+  --body-font-family: 'source-sans-3', sans-serif;
   --heading-font-family: var(--body-font-family);
-  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+  --fixed-font-family: 'source-sans-3', sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -39,13 +40,6 @@
 
   /* nav height */
   --nav-height: 72px;
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 100.06%;
-  ascent-override: 95%;
-  src: local('Arial');
 }
 
 @media (width >= 900px) {
@@ -156,7 +150,6 @@ a.button:any-link, button {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 30px;
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
