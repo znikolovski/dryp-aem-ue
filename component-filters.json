@@ -1,0 +1,71 @@
+[
+  {
+    "id": "main",
+    "components": [
+      "section"
+    ]
+  },
+  {
+    "id": "columns",
+    "components": []
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "creditcardsummary"
+    ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "hero",
+      "cards",
+      "columns",
+      "feature",
+      "simple-form",
+      "form",
+      "form-embed",
+      "forex",
+      "map",
+      "offer",
+      "creditcardsummary",
+      "featurearticles",
+      "fragment"
+    ]
+  },
+  {
+    "id": "cards",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "form",
+    "components": [
+      "checkbox",
+      "date-input",
+      "drop-down",
+      "email",
+      "file-input",
+      "form-button",
+      "form-fragment",
+      "form-image",
+      "form-reset-button",
+      "form-submit-button",
+      "number-input",
+      "panel",
+      "plain-text",
+      "radio-group",
+      "text-input",
+      "wizard"
+    ]
+  }
+]
