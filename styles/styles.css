@@ -210,6 +210,11 @@ main .section {
   padding: 12px 0;
 }
 
+main .dark {
+  background-color: var(--nav-background-color);
+  color: var(--background-color);
+}
+
 @media (width >= 600px) {
   main .section {
     padding: 18px 0;

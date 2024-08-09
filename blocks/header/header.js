@@ -159,51 +159,6 @@ export default async function decorate(block) {
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
 
-  // login section
-  const auth = document.createElement('div');
-  auth.classList.add('nav-auth');
-  console.log(getActiveAudiences());
-  if(window.localStorage.getItem("auth") === null) {
-    auth.innerHTML = LOGIN_FORM;
-    auth.addEventListener('click', () => {
-      const loginForm = document.getElementsByClassName('login-form')[0]; 
-      loginForm.style.display = "block"
-      loginForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const username = document.getElementById('userName').value;
-        const password = document.getElementById('password').value;
-
-        authenticate(username, password).then((user) => {
-          console.log(user)
-          const auth = document.getElementsByClassName('nav-auth')[0];
-          auth.innerHTML = `<button type="button" id="logout" aria-label="Login">
-            <span>Sign out</span>
-          </button>`;
-          const logoutButton = document.getElementById("logout");
-          logoutButton.addEventListener("click", () => {
-            auth.innerHTML = LOGIN_FORM;
-            window.localStorage.removeItem('auth');
-            const loginForm = document.getElementsByClassName('login-form')[0];
-            loginForm.style.display = 'none';
-          });
-          
-        });
-        // handle submit
-      });
-    });
-  } else {
-    auth.innerHTML = `<button type="button" id="logout" aria-label="Login">
-            <span>Sign out</span>
-          </button>`;
-    const logoutButton = auth.children[0];
-    logoutButton.addEventListener("click", () => {
-      window.localStorage.removeItem('auth');
-      location.reload();
-    });
-  }
-  
-  nav.append(auth);
-
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);

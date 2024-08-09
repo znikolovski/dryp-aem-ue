@@ -125,6 +125,17 @@
   
   }
 
+  .feature-callout-wrapper span.icon-dryp_logo {
+    display: inline;
+    margin: 0;
+  }
+
+  img[data-icon-name="dryp_logo"] {
+    width: 169px;
+    margin-right: -25px;
+    margin-left: -40px;
+}
+
   .feature-callout-wrapper p strong {
     font-size: 115px;
     margin: 0;

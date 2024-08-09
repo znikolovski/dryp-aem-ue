@@ -9,7 +9,7 @@ main .hero-container {
 main .hero {
   position: relative;
   padding: 32px;
-  min-height: 390px;
+  min-height: 450px;
   color: var(--background-color);
 }
 
@@ -24,10 +24,12 @@ main .hero .hero-body {
 }
 
 main .hero h1 {
-  max-width: 1280px;
-  margin: 106px auto 0;
+  max-width: 400px;
+  margin: 106px 0 0 0;
+  padding: 10px 0;
   color: white;
-  font: normal normal normal 48px/52px adobe-clean, sans-serif;
+  background-color: var(--nav-background-color);
+  font: normal normal 900 42px/48px source-sans-3, sans-serif;
 }
 
 main .hero h2 {
@@ -35,13 +37,21 @@ main .hero h2 {
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px 0;
   color: white;
-  font: normal normal 900 48px/52px adobe-clean, sans-serif;
+  background-color: var(--nav-background-color);
+  font: normal normal 900 48px/52px source-sans-3, sans-serif;
+}
+
+main .hero p {
+  max-width: 400px;
+  padding: 10px 0;
+  color: white;
+  background-color: var(--nav-background-color);
 }
 
 main .hero picture {
   position: absolute;
-  z-index: -1;
   inset: 0;
   object-fit: cover;
   box-sizing: border-box;

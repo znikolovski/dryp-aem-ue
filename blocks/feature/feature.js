@@ -72,12 +72,6 @@ export default async function decorate(block) {
   callOutWrapper.classList.add('feature-callout-wrapper');
   /* eslint prefer-destructuring: ["error", {VariableDeclarator: {object: true}}] */
   row = block.getElementsByTagName('div')[4];
-  const placeholders = await fetchPlaceholders('');
-  const { interestrate } = placeholders;
-  const interest = document.createElement('p');
-  interest.classList.add('feature-interest-rate');
-  interest.innerHTML = `<strong>${productData ? productData.interest_rate : interestrate}</strong><sup>APR</sup>`;
-  callOutWrapper.appendChild(interest);
 
   callOutWrapper.append(row);
 
