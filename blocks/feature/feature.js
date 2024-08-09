@@ -12,54 +12,6 @@ export default async function decorate(block) {
   mediaWrapper.append(picture);
 
   const productWrapper = block.lastElementChild;
-  const productCFPath = productWrapper && block.lastElementChild.getElementsByTagName('a').length > 0 ? block.lastElementChild.getElementsByTagName('a')[0].title : null;
-
-  const url = window.location && window.location.origin && window.location.origin.includes('author')
-    ? `${aemauthorurl}${persistedquery};path=${productCFPath};ts=${Math.random() * 1000}`
-    : `${aempublishurl}${persistedquery};path=${productCFPath};ts=${Math.random() * 1000}`;
-  const options = { credentials: 'include' };
-
-  // console.log(url); //https://author-p123917-e1220159.adobeaemcloud.com/graphql/execute.json/securbank/OfferByPath;path=/content/dam/securbank/en/offers/997;variation=main;ts=172.03956935404463
-
-  const productData = await fetch(url, options)
-    .then((response) => response.json())
-    .then(async (contentfragment) => {
-      let product = '';
-      if (contentfragment.data) {
-        product = contentfragment.data.productByPath.item;
-      }
-      const productId = product.productReference;
-      const productQueryOptions = {
-        method: 'GET',
-        headers: {
-          "Content-Type": "application/json"
-        }
-      }
-
-      const productData = await fetch(commerceurl+'?query='+`
-        {
-          products(filter: { sku: { eq: "${productId}" } }) {
-            items {
-              name
-              interest_rate
-              sku
-            }
-          }
-        }
-      `
-    , productQueryOptions)
-      .then((response) => response.json())
-      .then((product) => {
-        if (product.data && product.data.products.items.length > 0) {
-          return product.data.products.items[0];
-        }
-      });
-
-      return productData;
-    });
-
-  
-  
 
   const contentWrapper = document.createElement('div');
   contentWrapper.classList.add('feature-content-wrapper');
