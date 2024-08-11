@@ -91,9 +91,9 @@
   .banner-content .banner-detail .detail {
     font-size: 12px;
     text-transform: uppercase;
-    opacity: 0.6;
     font-weight: 400;
     line-height: 30px;
+    width: 450px;
     padding: 0;
     margin: 0;
   }
@@ -110,7 +110,7 @@
   .banner-content .banner-logo {
     display: block;
     width: 400px;
-    background-image: url("/icons/dryp_logo.svg");
+    background-image: url("/icons/Logo-Primary.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 191px 53px;
